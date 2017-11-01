@@ -21,14 +21,11 @@ import com.mindorks.placeholderview.annotations.View;
 @Layout(R.layout.drawer_item)
 public class DrawerMenuItem {
 
-    public static final int DRAWER_MENU_ITEM_PROFILE = 1;
-    public static final int DRAWER_MENU_ITEM_REQUESTS = 2;
-    public static final int DRAWER_MENU_ITEM_GROUPS = 3;
-    public static final int DRAWER_MENU_ITEM_MESSAGE = 4;
-    public static final int DRAWER_MENU_ITEM_NOTIFICATIONS = 5;
-    public static final int DRAWER_MENU_ITEM_SETTINGS = 6;
-    public static final int DRAWER_MENU_ITEM_TERMS = 7;
-    public static final int DRAWER_MENU_ITEM_LOGOUT = 8;
+    public static final int DRAWER_MENU_ITEM_UPLOADS = 1;
+    public static final int DRAWER_MENU_ITEM_TUTORIALS = 2;
+    public static final int DRAWER_MENU_ITEM_REVIEWS = 3;
+    public static final int DRAWER_MENU_ITEM_PRIVACY = 4;
+    public static final int DRAWER_MENU_ITEM_LOGOUT = 5;
 
     private int mMenuPosition;
     private Context mContext;
@@ -48,33 +45,21 @@ public class DrawerMenuItem {
     @Resolve
     private void onResolved() {
         switch (mMenuPosition){
-            case DRAWER_MENU_ITEM_PROFILE:
-                itemNameTxt.setText("Profile");
+            case DRAWER_MENU_ITEM_UPLOADS:
+                itemNameTxt.setText("My Videos");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_account_circle_black_18dp));
                 break;
-            case DRAWER_MENU_ITEM_REQUESTS:
-                itemNameTxt.setText("Requests");
+            case DRAWER_MENU_ITEM_TUTORIALS:
+                itemNameTxt.setText("Tutorials");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_compare_arrows_black_18dp));
                 break;
-            case DRAWER_MENU_ITEM_GROUPS:
-                itemNameTxt.setText("Groups");
+            case DRAWER_MENU_ITEM_REVIEWS:
+                itemNameTxt.setText("Reviews");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_group_work_black_18dp));
                 break;
-            case DRAWER_MENU_ITEM_MESSAGE:
-                itemNameTxt.setText("Messages");
+            case DRAWER_MENU_ITEM_PRIVACY:
+                itemNameTxt.setText("Privacy");
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_18dp));
-                break;
-            case DRAWER_MENU_ITEM_NOTIFICATIONS:
-                itemNameTxt.setText("Notifications");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_notifications_black_18dp));
-                break;
-            case DRAWER_MENU_ITEM_SETTINGS:
-                itemNameTxt.setText("Settings");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_settings_black_18dp));
-                break;
-            case DRAWER_MENU_ITEM_TERMS:
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_18dp));
-                itemNameTxt.setText("Terms");
                 break;
             case DRAWER_MENU_ITEM_LOGOUT:
                 itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_exit_to_app_black_18dp));
@@ -86,36 +71,24 @@ public class DrawerMenuItem {
     @Click(R.id.mainView)
     private void onMenuItemClick(){
         switch (mMenuPosition){
-            case DRAWER_MENU_ITEM_PROFILE:
-                Toast.makeText(mContext, "Profile", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_UPLOADS:
+                //Toast.makeText(mContext, "Profile", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onProfileMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_REQUESTS:
-                Toast.makeText(mContext, "Requests", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_TUTORIALS:
+                //Toast.makeText(mContext, "Requests", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onRequestMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_GROUPS:
-                Toast.makeText(mContext, "Groups", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_REVIEWS:
+                //Toast.makeText(mContext, "Groups", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onGroupsMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_MESSAGE:
-                Toast.makeText(mContext, "Messages", Toast.LENGTH_SHORT).show();
+            case DRAWER_MENU_ITEM_PRIVACY:
+                //Toast.makeText(mContext, "Messages", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onMessagesMenuSelected();
                 break;
-            case DRAWER_MENU_ITEM_NOTIFICATIONS:
-                Toast.makeText(mContext, "Notifications", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onNotificationsMenuSelected();
-                break;
-            case DRAWER_MENU_ITEM_SETTINGS:
-                Toast.makeText(mContext, "Settings", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onSettingsMenuSelected();
-                break;
-            case DRAWER_MENU_ITEM_TERMS:
-                Toast.makeText(mContext, "Terms", Toast.LENGTH_SHORT).show();
-                if(mCallBack != null)mCallBack.onTermsMenuSelected();
-                break;
             case DRAWER_MENU_ITEM_LOGOUT:
-                Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext, "Logout", Toast.LENGTH_SHORT).show();
                 if(mCallBack != null)mCallBack.onLogoutMenuSelected();
                 break;
         }

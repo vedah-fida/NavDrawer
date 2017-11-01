@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "671297194290",
+    "project_id": "firebase-vpproject"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671297194290:android:261a1a007a59aee5",
+        "android_client_info": {
+          "package_name": "com.example.ken.navdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671297194290-o0jucu61h8a2hbbs68gua4os4lps343m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ken.navdrawer",
+            "certificate_hash": "0f5ae7f7ba9c81d9576e3957cc8099f4a9fecfcd"
+          }
+        },
+        {
+          "client_id": "671297194290-njde2r8p6v6pogsaaap7p9g6vt1itou6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj5T6KQYuHxLdKQZ-TIN7Lh1KrdTWvNxY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
